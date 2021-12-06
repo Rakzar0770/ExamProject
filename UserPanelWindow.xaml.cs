@@ -46,7 +46,7 @@ namespace ExamProject
         {
             if (taskList.SelectedItem == null) return;
             UserTask userTask = taskList.SelectedItem as UserTask;
-            if (userTask.TaskAnotation.Contains("(Выполнено)"))
+            if (userTask.TaskAnotation.Contains("(Выполнено!)"))
             {
                 MessageBox.Show("Задание уже выполнено!");
             }
