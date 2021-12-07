@@ -8,7 +8,7 @@
         Title="AllTaskWindow" Height="450" Width="800">
     <StackPanel>
         <TextBlock Text="Все задачи сотрудников" TextAlignment="Center" FontSize="40" ></TextBlock>
-        <ListBox x:Name="taskList" ItemsSource="{Binding}" Height="330" ScrollViewer.VerticalScrollBarVisibility="Auto" MouseDoubleClick="usersList_MouseDoubleClick">
+        <ListBox x:Name="taskList" ItemsSource="{Binding}" Height="330" ScrollViewer.VerticalScrollBarVisibility="Auto" MouseDoubleClick="usersList_MouseDoubleClick" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
