@@ -35,18 +35,11 @@ namespace ExamProject
             throw new NotImplementedException();
         }
 
-        private void ShowTask_Click(object sender, RoutedEventArgs e)
-        {
-            if (taskList.SelectedItem == null) return;
-            UserTask userTask = taskList.SelectedItem as UserTask;
-            MessageBox.Show(userTask.TaskText);
-        }
-
         private void Done_Click(object sender, RoutedEventArgs e)
         {
             if (taskList.SelectedItem == null) return;
             UserTask userTask = taskList.SelectedItem as UserTask;
-            if (userTask.TaskAnotation.Contains("(Выполнено!)"))
+            if (userTask.TaskAnotation.Contains("(Выполнено)"))
             {
                 MessageBox.Show("Задание уже выполнено!");
             }
@@ -61,6 +54,11 @@ namespace ExamProject
             
         }
 
-        
+        private void taskList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (taskList.SelectedItem == null) return;
+            UserTask userTask = taskList.SelectedItem as UserTask;
+            MessageBox.Show(userTask.TaskText,"Информация", MessageBoxButton.OK,MessageBoxImage.Information);
+        }
     }
 }

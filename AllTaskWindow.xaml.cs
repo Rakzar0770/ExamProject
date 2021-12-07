@@ -28,5 +28,13 @@ namespace ExamProject
             appContext.UserTasks.Load();
             this.DataContext = appContext.UserTasks.Local.ToBindingList();
         }
+
+        private void usersList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (taskList.SelectedItem == null) return;
+            UserTask userTask = taskList.SelectedItem as UserTask;
+            User user = appContext.Users.Where(item => item.Id == userTask.UserId).FirstOrDefault();
+            MessageBox.Show($"Задача для: {user.Name} {user.Surname}\n" + userTask.TaskText, "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }

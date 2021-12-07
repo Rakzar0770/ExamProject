@@ -30,6 +30,7 @@ namespace ExamProject
             this.DataContext = appContext.Users.Local.ToBindingList();
             usersList.Visibility = Visibility.Collapsed;
             ButtonsPanel.Visibility = Visibility.Collapsed;
+            ButtonsPanel2.Visibility = Visibility.Collapsed;
 
         }
 
@@ -68,11 +69,13 @@ namespace ExamProject
             {
                 usersList.Visibility = Visibility.Visible;
                 ButtonsPanel.Visibility = Visibility.Visible;
+                ButtonsPanel2.Visibility = Visibility.Visible;
             }
             else
             {
                 usersList.Visibility = Visibility.Collapsed;
                 ButtonsPanel.Visibility = Visibility.Collapsed;
+                ButtonsPanel2.Visibility = Visibility.Collapsed;
             }
 
         }

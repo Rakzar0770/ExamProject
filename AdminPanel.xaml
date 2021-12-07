@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:ExamProject"
         mc:Ignorable="d"
-        Title="AdminPanel" Height="500" Width="600">
+        Title="AdminPanel" Height="530" Width="600">
     <Grid>
         <Grid.RowDefinitions>
         </Grid.RowDefinitions>
@@ -33,7 +33,7 @@
             </StackPanel>
             <StackPanel x:Name="ButtonsPanel2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="5">
                 <Button Content="Изменить данные" Margin="10" Click="Replace_Click" Width="171"  />
-                <Button Content="Удалить сотрудника" Margin="10,0,0,0" Click="Delete_Click" Width="154"  />
+                <Button Content="Удалить сотрудника" Margin="10,0,0,0" Click="Delete_Click" Width="154" FontSize="13"  />
                 <Button Content="Все задачи" Margin="20,0,0,0" Click="AllTask_Click" Width="157"  />
 
             </StackPanel>

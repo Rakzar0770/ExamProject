@@ -6,15 +6,17 @@
         xmlns:local="clr-namespace:ExamProject"
         mc:Ignorable="d"
         Title="AllTaskWindow" Height="450" Width="800">
-    <ListBox x:Name="usersList" ItemsSource="{Binding}" Height="330" ScrollViewer.VerticalScrollBarVisibility="Auto">
-        <ListBox.ItemTemplate>
-            <DataTemplate>
-                <StackPanel>
-                    <TextBlock Text="{Binding TaskAnotation}" FontSize="20" />
-                    <TextBlock Text="{Binding StringFormat= Имя {Name}, Path=User}" FontSize="20" />
-                </StackPanel>
-
-            </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>
+    <StackPanel>
+        <TextBlock Text="Все задачи сотрудников" TextAlignment="Center" FontSize="40" ></TextBlock>
+        <ListBox x:Name="taskList" ItemsSource="{Binding}" Height="330" ScrollViewer.VerticalScrollBarVisibility="Auto" MouseDoubleClick="usersList_MouseDoubleClick">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock  Text="{Binding TaskAnotation}" FontSize="20" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+    
 </Window>
