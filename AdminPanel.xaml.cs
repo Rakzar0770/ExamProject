@@ -117,5 +117,11 @@ namespace ExamProject
                 }
             }
         }
+
+        private void AllTask_Click(object sender, RoutedEventArgs e)
+        {
+            AllTaskWindow allTask = new AllTaskWindow();
+            allTask.ShowDialog();
+        }
     }
 }
