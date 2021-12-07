@@ -40,11 +40,11 @@ namespace ExamProject
             appContext.SaveChanges();
         }
 
-        private void ShowTask_Click(object sender, RoutedEventArgs e)
+        private void taskList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (taskList.SelectedItem == null) return;
             UserTask userTask = taskList.SelectedItem as UserTask;
-            MessageBox.Show(userTask.TaskText);
+            MessageBox.Show(userTask.TaskText, "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

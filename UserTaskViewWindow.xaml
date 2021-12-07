@@ -8,7 +8,7 @@
         Title="UserTaskViewWindow" Height="450" Width="800">
     <StackPanel>
         <TextBlock Name="UserT" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
-        <ListBox x:Name="taskList" ItemsSource="{Binding}" Background="AliceBlue" Style="{StaticResource MaterialDesignChoiceChipOutlineListBox}">
+        <ListBox x:Name="taskList" ItemsSource="{Binding}" Background="AliceBlue" Style="{StaticResource MaterialDesignChoiceChipOutlineListBox}" MouseDoubleClick="taskList_MouseDoubleClick">
 
             <ListBox.ItemTemplate >
                 <DataTemplate>
@@ -19,7 +19,6 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-            <Button Content="Просмотреть задачу" Margin="10" Click="ShowTask_Click"></Button>
             <Button Content="Удалить задачу" Margin="10" Click="DeleteTask_Click"></Button>
         </StackPanel>
         

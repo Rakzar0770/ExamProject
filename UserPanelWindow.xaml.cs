@@ -25,7 +25,7 @@ namespace ExamProject
         {
             InitializeComponent();
             appContext = new AppContext();
-            UserT.Text = $"Задачи сотрудника: {user.Name} {user.Surname}";
+            UserT.Text = $"Приветствую {user.Name} {user.Surname}. Твои задачи:";
             appContext.UserTasks.Where(item => item.UserId == user.Id).Load();
             this.DataContext = appContext.UserTasks.Local.ToBindingList();
         }
