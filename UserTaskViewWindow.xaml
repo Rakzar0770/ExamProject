@@ -13,7 +13,7 @@
             <ListBox.ItemTemplate >
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding TaskAnotation}" FontSize="20" />
+                        <TextBlock Text="{Binding TaskAnotation}" FontSize="20" ToolTip="Double Click для полной информации" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

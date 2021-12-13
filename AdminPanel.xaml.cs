@@ -126,5 +126,13 @@ namespace ExamProject
             AllTaskWindow allTask = new AllTaskWindow();
             allTask.ShowDialog();
         }
+
+        private void usersList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (usersList.SelectedItem == null) return;
+            User user = usersList.SelectedItem as User;
+            UserTaskViewWindow userTaskView = new UserTaskViewWindow(user);
+            userTaskView.ShowDialog();
+        }
     }
 }

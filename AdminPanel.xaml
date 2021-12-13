@@ -12,7 +12,7 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <Button Content="Открыть/закрыть список пользователей" Click="UserListOpen_Click"/>
-            <ListBox x:Name="usersList" ItemsSource="{Binding}" Height="330" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox x:Name="usersList" ItemsSource="{Binding}" Height="330" ScrollViewer.VerticalScrollBarVisibility="Auto" ToolTip="Double Click для просмотра задач сотрудника" MouseDoubleClick="usersList_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
@@ -28,13 +28,14 @@
             <StackPanel x:Name="ButtonsPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="5">
                 <Button Content="Добавить сотрудника" Margin="10" Click="Add_Click" />
                 <Button  Content="Поставить задачу" Margin="10" Click="TakeTask_Click"  />
-                <Button Content="Задачи сотрудника" Margin="10" Click="ShowTaskUser_Click"  />
+                <Button Content="Изменить данные" Margin="10" Click="Replace_Click" Width="171"  />
+                <!--<Button Content="Задачи сотрудника" Margin="10" Click="ShowTaskUser_Click"  />-->
 
             </StackPanel>
-            <StackPanel x:Name="ButtonsPanel2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="5">
-                <Button Content="Изменить данные" Margin="10" Click="Replace_Click" Width="171"  />
-                <Button Content="Удалить сотрудника" Margin="10,0,0,0" Click="Delete_Click" Width="154" FontSize="13"  />
-                <Button Content="Все задачи" Margin="20,0,0,0" Click="AllTask_Click" Width="157"  />
+            <StackPanel x:Name="ButtonsPanel2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                
+                <Button Content="Удалить сотрудника" Margin="0,0,75,0" Click="Delete_Click" Width="154" FontSize="13"  />
+                <Button Content="Все задачи"  Click="AllTask_Click" Width="157"  />
 
             </StackPanel>
         </StackPanel>
